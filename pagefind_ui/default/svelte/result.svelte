@@ -35,13 +35,13 @@
                 {/if}
             </div>
         {/if}
-        <div class="pagefind-ui__result-inner">
-            <p class="pagefind-ui__result-title">
-                <a
+<a
                     class="pagefind-ui__result-link"
                     href={data.meta?.url || data.url}
-                    >{data.meta?.title}</a
-                >
+                    >
+        <div class="pagefind-ui__result-inner">
+            <p class="pagefind-ui__result-title">
+                {data.meta?.title}
             </p>
             <p class="pagefind-ui__result-excerpt">{@html data.excerpt}</p>
             {#if meta.length}
@@ -56,6 +56,8 @@
                 </ul>
             {/if}
         </div>
+</a
+                >
     {:else}
         {#if show_images}
             <div class="pagefind-ui__result-thumb pagefind-ui__loading" />
